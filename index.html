@@ -642,13 +642,13 @@
 
         <div class="box">
                 <h2>1- Etiqueta &lt;audio&gt; </h2>
-                <p>define un hipervinculo/link/enlace..etc</p>
-                <p><i>Atributos:</i>download, href, hreflang, media, ping, referrerpolicy, rel, target, type</p>
+                <p>define un contenido sonoro.</p>
+                <p><i>Atributos:</i>autoplay, controls, loop, muted, preload, src</p>
                 <h3>Ejemplo</h3>
-                sigueme en &lt;a href="https://github.com/Ezio2220"&gt;Github&lt;/a&gt;
+                &lt;audio controls&gt; &lt;source src="hola.mp3" type="audio/mpeg"&gt;  &lt;/audio&gt;
                 <br>
                 <h3>Resultado</h3>
-                sigueme en <a href="https://github.com/Ezio2220">Github</a>;
+                <audio controls> <source src="hola.mp3" type="audio/mpeg"> </audio>
         </div>
         <div class="box">
                 <h2>2- Etiqueta &lt;article&gt; </h2>
@@ -662,183 +662,246 @@
         </div>
         <div class="box">
                 <h2>3- Etiqueta &lt;aside&gt; </h2>
-                <p>define un hipervinculo/link/enlace..etc</p>
-                <p><i>Atributos:</i>download, href, hreflang, media, ping, referrerpolicy, rel, target, type</p>
+                <p>define un contenido a lado del contenido de la pagina</p>
+                <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
-                sigueme en &lt;a href="https://github.com/Ezio2220"&gt;Github&lt;/a&gt;
+                &lt;p&gt; contenido &lt;/p&gt; &lt;aside&gt; &lt;h5&gt; otra onda&lt;/h5&gt; &lt;p&gt;si otra onda&lt;/p&gt;  &lt;/aside&gt;
                 <br>
                 <h3>Resultado</h3>
-                sigueme en <a href="https://github.com/Ezio2220">Github</a>;
+                <p>contenido </p> <aside> <h5> otra onda</h5> <p>si otra onda</p>  </aside>
         </div>
         <div class="box">
                 <h2>4- Etiqueta &lt;canvas&gt; </h2>
-                <p>define un hipervinculo/link/enlace..etc</p>
-                <p><i>Atributos:</i>download, href, hreflang, media, ping, referrerpolicy, rel, target, type</p>
+                <p>se usa para hacer dibujos, sobre la marcha mediante scripts (usualmente javascript)</p>
+                <p><i>Atributos:</i>height, width</p>
                 <h3>Ejemplo</h3>
-                sigueme en &lt;a href="https://github.com/Ezio2220"&gt;Github&lt;/a&gt;
+                &lt;canvas id="Canvas1"&gt;&lt;/canvas&gt;
+	        &lt;script&gt;
+		        var canvas = document.getElementById("Canvas1");
+		        var ctx = canvas.getContext("2d");
+		        ctx.fillStyle = "#FF0000";ctx.fillRect(0, 0, 80, 80);
+	        &lt;/script&gt;
                 <br>
                 <h3>Resultado</h3>
-                sigueme en <a href="https://github.com/Ezio2220">Github</a>;
+                <canvas id="Canvas1"></canvas>
+	        <script>
+		        var canvas = document.getElementById("Canvas1");
+		        var ctx = canvas.getContext("2d");
+		        ctx.fillStyle = "#FF0000";
+		        ctx.fillRect(0, 0, 80, 80);
+	        </script>
+                
         </div>
         <div class="box">
                 <h2>5- Etiqueta &lt;details&gt; </h2>
-                <p>define un hipervinculo/link/enlace..etc</p>
-                <p><i>Atributos:</i>download, href, hreflang, media, ping, referrerpolicy, rel, target, type</p>
+                <p>define detalles adicionales que el usuario puede ver o ocultar.</p>
+                <p><i>Atributos:</i>open.</p>
                 <h3>Ejemplo</h3>
-                sigueme en &lt;a href="https://github.com/Ezio2220"&gt;Github&lt;/a&gt;
+                &lt;summary&gt;Leonardo da Vinci.&lt;/summary&gt;
+	        &lt;details&gt; &lt;p&gt;en la actualidad no existe!. &lt;/p&gt; &lt;/details&gt;
                 <br>
                 <h3>Resultado</h3>
-                sigueme en <a href="https://github.com/Ezio2220">Github</a>;
+                <summary>Leonardo da Vinci.</summary>
+		<details> <p>en la actualidad no existe!. </p> </details>
         </div>
         <div class="box">
                 <h2>6- Etiqueta &lt;datalist&gt; </h2>
-                <p>define un hipervinculo/link/enlace..etc</p>
-                <p><i>Atributos:</i>download, href, hreflang, media, ping, referrerpolicy, rel, target, type</p>
+                <p>especifica una lista de opciones predefinidas para los input.</p>
+                <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
-                sigueme en &lt;a href="https://github.com/Ezio2220"&gt;Github&lt;/a&gt;
+                &lt;input list="browsers"&gt;
+                &lt;datalist id="browsers"&gt;
+                        &lt;option value="Internet Explorer"&gt;
+                        &lt;option value="Firefox"&gt;
+                        &lt;option value="Chrome"&gt;
+                        &lt;option value="Opera"&gt;
+                        &lt;option value="Safari"&gt;
+                &lt;/datalist&gt;
                 <br>
                 <h3>Resultado</h3>
-                sigueme en <a href="https://github.com/Ezio2220">Github</a>;
+                <input list="browsers">
+                <datalist id="browsers">
+                        <option value="Internet Explorer">
+                        <option value="Firefox">
+                        <option value="Chrome">
+                        <option value="Opera">
+                        <option value="Safari">
+                </datalist>
         </div>
         <div class="box">
                 <h2>7- Etiqueta &lt;embed&gt; </h2>
-                <p>define un hipervinculo/link/enlace..etc</p>
-                <p><i>Atributos:</i>download, href, hreflang, media, ping, referrerpolicy, rel, target, type</p>
+                <p>define un contenedor para una aplicacion(no html) externa.</p>
+                <p><i>Atributos:</i>height, src, type, width</p>
                 <h3>Ejemplo</h3>
-                sigueme en &lt;a href="https://github.com/Ezio2220"&gt;Github&lt;/a&gt;
+                &lt;embed src="holamundo.swf"&gt;
                 <br>
                 <h3>Resultado</h3>
-                sigueme en <a href="https://github.com/Ezio2220">Github</a>;
+                <embed src="holamundo.swf">
         </div>
         <div class="box">
                 <h2>8- Etiqueta &lt;foter&gt; </h2>
-                <p>define un hipervinculo/link/enlace..etc</p>
-                <p><i>Atributos:</i>download, href, hreflang, media, ping, referrerpolicy, rel, target, type</p>
+                <p>define el pie de pagina para un documento o seccion</p>
+                <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
-                sigueme en &lt;a href="https://github.com/Ezio2220"&gt;Github&lt;/a&gt;
+                &lt;footer&gt;
+                        &lt;p&gt;hecho por: Franklin Fuentes&lt;/p&gt;
+                &lt;/footer&gt;
                 <br>
                 <h3>Resultado</h3>
-                sigueme en <a href="https://github.com/Ezio2220">Github</a>;
+                <footer>
+                        <p>hecho por: Franklin Fuentes</p>
+                </footer>
         </div>
         <div class="box">
                 <h2>9- Etiqueta &lt;header&gt; </h2>
-                <p>define un hipervinculo/link/enlace..etc</p>
-                <p><i>Atributos:</i>download, href, hreflang, media, ping, referrerpolicy, rel, target, type</p>
+                <p>define un encabezado para un documento o seccion</p>
+                <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
-                sigueme en &lt;a href="https://github.com/Ezio2220"&gt;Github&lt;/a&gt;
+                &lt;header&gt;
+   	                &lt;h5&gt;un encabezado importante&lt;/h5&gt;
+	        &lt;/header&gt;
                 <br>
                 <h3>Resultado</h3>
-                sigueme en <a href="https://github.com/Ezio2220">Github</a>;
+                <header>
+                        <h5>un encabezado importante</h5>
+                </header>
         </div>
         <div class="box">
                 <h2>10- Etiqueta &lt;mark&gt; </h2>
-                <p>define un hipervinculo/link/enlace..etc</p>
-                <p><i>Atributos:</i>download, href, hreflang, media, ping, referrerpolicy, rel, target, type</p>
+                <p>define un texto marcado/ resaltado</p>
+                <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
-                sigueme en &lt;a href="https://github.com/Ezio2220"&gt;Github&lt;/a&gt;
+                &lt;p&gt;estudia para  &lt;mark&gt;ingenieria economica&lt;/mark&gt; Hoy.&lt;/p&gt;
                 <br>
                 <h3>Resultado</h3>
-                sigueme en <a href="https://github.com/Ezio2220">Github</a>;
+                <p>estudia para  <mark>ingenieria economica</mark> Hoy.</p>
         </div>
         <div class="box">
                 <h2>11- Etiqueta &lt;meter&gt; </h2>
-                <p>define un hipervinculo/link/enlace..etc</p>
-                <p><i>Atributos:</i>download, href, hreflang, media, ping, referrerpolicy, rel, target, type</p>
+                <p>define una medidor dentro de un rango definido.</p>
+                <p><i>Atributos:</i>form, high, low, max, min, optimum, value.</p>
                 <h3>Ejemplo</h3>
-                sigueme en &lt;a href="https://github.com/Ezio2220"&gt;Github&lt;/a&gt;
+                &lt;meter value="0.6"&gt;60%&lt;/meter&gt;
                 <br>
                 <h3>Resultado</h3>
-                sigueme en <a href="https://github.com/Ezio2220">Github</a>;
+                <meter value="0.6">60%</meter>
         </div>
         <div class="box">
                 <h2>12- Etiqueta &lt;nav&gt; </h2>
-                <p>define un hipervinculo/link/enlace..etc</p>
-                <p><i>Atributos:</i>download, href, hreflang, media, ping, referrerpolicy, rel, target, type</p>
+                <p>define los links de navegacion del sitio.</p>
+                <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
-                sigueme en &lt;a href="https://github.com/Ezio2220"&gt;Github&lt;/a&gt;
+                &lt;nav&gt;
+                        &lt;a href="#HTML"&gt;Etiquetas Html5&lt;/a&gt; 
+                &lt;/nav&gt;
                 <br>
                 <h3>Resultado</h3>
-                sigueme en <a href="https://github.com/Ezio2220">Github</a>;
+                <nav>
+                        <a href="#HTML">Etiquetas Html5</a> 
+                </nav>
         </div>
         <div class="box">
                 <h2>13- Etiqueta &lt;progress&gt; </h2>
-                <p>define un hipervinculo/link/enlace..etc</p>
-                <p><i>Atributos:</i>download, href, hreflang, media, ping, referrerpolicy, rel, target, type</p>
+                <p>representa el progreso de una tarea(barrita de carga).</p>
+                <p><i>Atributos:</i>max, value</p>
                 <h3>Ejemplo</h3>
-                sigueme en &lt;a href="https://github.com/Ezio2220"&gt;Github&lt;/a&gt;
+                &lt;progress value="22" max="100"&gt;&lt;/progress&gt;
                 <br>
                 <h3>Resultado</h3>
-                sigueme en <a href="https://github.com/Ezio2220">Github</a>;
+                <progress value="22" max="100"></progress>
+                
         </div>
         <div class="box">
                 <h2>14- Etiqueta &lt;svg&gt; </h2>
-                <p>define un hipervinculo/link/enlace..etc</p>
-                <p><i>Atributos:</i>download, href, hreflang, media, ping, referrerpolicy, rel, target, type</p>
+                <p>define un contenedor de graficos svg(graficas vectoriales escalables)</p>
+                <p><i>Atributos:</i>width, height</p>
                 <h3>Ejemplo</h3>
-                sigueme en &lt;a href="https://github.com/Ezio2220"&gt;Github&lt;/a&gt;
+                &lt;svg width="100" height="100"&gt;
+                        &lt;circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" /&gt;
+                &lt;/svg&gt;
                 <br>
                 <h3>Resultado</h3>
-                sigueme en <a href="https://github.com/Ezio2220">Github</a>;
+                <svg width="100" height="100">
+                        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+                </svg>
         </div>
         <div class="box">
                 <h2>15- Etiqueta &lt;source&gt; </h2>
-                <p>define un hipervinculo/link/enlace..etc</p>
-                <p><i>Atributos:</i>download, href, hreflang, media, ping, referrerpolicy, rel, target, type</p>
+                <p>define multiples recursos multimedia para elementos de multimedia(audio y video)</p>
+                <p><i>Atributos:</i> src, srcset, media, sizes, type.</p>
                 <h3>Ejemplo</h3>
-                sigueme en &lt;a href="https://github.com/Ezio2220"&gt;Github&lt;/a&gt;
+                &lt;audio controls&gt; &lt;source src="hola.mp3" type="audio/mpeg"&gt;  &lt;/audio&gt;
                 <br>
                 <h3>Resultado</h3>
-                sigueme en <a href="https://github.com/Ezio2220">Github</a>;
+                <audio controls> <source src="hola.mp3" type="audio/mpeg"> </audio>
         </div>
         <div class="box">
                 <h2>16- Etiqueta &lt;summary&gt; </h2>
-                <p>define un hipervinculo/link/enlace..etc</p>
-                <p><i>Atributos:</i>download, href, hreflang, media, ping, referrerpolicy, rel, target, type</p>
+                <p>define un encabezado visible para los elementos de la etiqueta &lt;details&gt;</p>
+                <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
-                sigueme en &lt;a href="https://github.com/Ezio2220"&gt;Github&lt;/a&gt;
+                &lt;summary&gt;Leonardo da Vinci.&lt;/summary&gt;
+                &lt;details&gt; &lt;p&gt;en la actualidad no existe!. &lt;/p&gt; &lt;/details&gt;
                 <br>
                 <h3>Resultado</h3>
-                sigueme en <a href="https://github.com/Ezio2220">Github</a>;
+                <summary>Leonardo da Vinci.</summary>
+		<details> <p>en la actualidad no existe!. </p> </details>
         </div>
         <div class="box">
                 <h2>17- Etiqueta &lt;track&gt; </h2>
-                <p>define un hipervinculo/link/enlace..etc</p>
-                <p><i>Atributos:</i>download, href, hreflang, media, ping, referrerpolicy, rel, target, type</p>
+                <p>define pistas de texto para elementos multimedia.</p>
+                <p><i>Atributos:</i>default, kind, label, src, srclang</p>
                 <h3>Ejemplo</h3>
-                sigueme en &lt;a href="https://github.com/Ezio2220"&gt;Github&lt;/a&gt;
+                &lt;video width="160" height="120" controls&gt;
+		        &lt;source src="trailer.mp4" type="video/mp4"&gt;
+		        &lt;track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="English"&gt;
+	        &lt;/video&gt;
                 <br>
                 <h3>Resultado</h3>
-                sigueme en <a href="https://github.com/Ezio2220">Github</a>;
+                <video width="160" height="120" controls>
+                        <source src="trailer.mp4" type="video/mp4">
+                        <track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="English">
+                </video>
         </div>
         <div class="box">
                 <h2>18- Etiqueta &lt;time&gt; </h2>
-                <p>define un hipervinculo/link/enlace..etc</p>
-                <p><i>Atributos:</i>download, href, hreflang, media, ping, referrerpolicy, rel, target, type</p>
+                <p>define una fecha o hora.</p>
+                <p><i>Atributos:</i>datetime</p>
                 <h3>Ejemplo</h3>
-                sigueme en &lt;a href="https://github.com/Ezio2220"&gt;Github&lt;/a&gt;
+                &lt;p&gt;En esta fecha &lt;time datetime="2020-01-10 10:00"&gt;Viajaré&lt;/time&gt;.&lt;/p&gt;
                 <br>
                 <h3>Resultado</h3>
-                sigueme en <a href="https://github.com/Ezio2220">Github</a>;
+                <p>En esta fecha <time datetime="2020-01-10 10:00">Viajaré</time>.</p>
         </div>
         <div class="box">
                 <h2>19- Etiqueta &lt;video&gt; </h2>
-                <p>define un hipervinculo/link/enlace..etc</p>
-                <p><i>Atributos:</i>download, href, hreflang, media, ping, referrerpolicy, rel, target, type</p>
+                <p>define un video o pelicula.</p>
+                <p><i>Atributos:</i>autoplay, controls, height, loop, muted, poster, preload, src, width</p>
                 <h3>Ejemplo</h3>
-                sigueme en &lt;a href="https://github.com/Ezio2220"&gt;Github&lt;/a&gt;
+                &lt;video width="160" height="120" controls&gt;
+		        &lt;source src="trailer.mp4" type="video/mp4"&gt;
+		        &lt;track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="English"&gt;
+	        &lt;/video&gt;
                 <br>
                 <h3>Resultado</h3>
-                sigueme en <a href="https://github.com/Ezio2220">Github</a>;
+                <video width="160" height="120" controls>
+                        <source src="trailer.mp4" type="video/mp4">
+                        <track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="English">
+                </video>
         </div>
         <div class="box">
                 <h2>20- Etiqueta &lt;wbr&gt; </h2>
-                <p>define un hipervinculo/link/enlace..etc</p>
-                <p><i>Atributos:</i>download, href, hreflang, media, ping, referrerpolicy, rel, target, type</p>
+                <p>define un posible salto de linea</p>
+                <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
-                sigueme en &lt;a href="https://github.com/Ezio2220"&gt;Github&lt;/a&gt;
+                &lt;p&gt;
+                para ser mejor debes dejar de compararte con&lt;wbr&gt;otros&lt;wbr&gt;centrate solo en ti mismo.
+                &lt;/p&gt;
                 <br>
                 <h3>Resultado</h3>
-                sigueme en <a href="https://github.com/Ezio2220">Github</a>;
+                <p>
+                para ser mejor debes dejar de compararte con<wbr>otros<wbr>centrate solo en ti mismo.
+                </p>
         </div>
 
     </div>
