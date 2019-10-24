@@ -727,53 +727,77 @@
             </div>
         <div class="box">
                 <h2>36- Etiqueta &lt;map&gt; </h2>
-                <p>explicacion</p>
-                <p><i>Atributos:</i>info</p>
+                <p>define una imagen de un mapa</p>
+                <p><i>Atributos:</i>name</p>
                 <h3>Ejemplo</h3>
-                algo &lt; &gt;
+                &lt;img src="planetas.gif" width="145" height="126" alt="Planetas"
+                usemap="#planetmap"&gt;
+                &lt;map name="planetas"&gt;
+                  &lt;area shape="rect" coords="0,0,82,126" download="sol.jpg" &gt;
+                  &lt;area shape="circle" coords="90,58,3" download="mercurio.jpg" &gt;
+                &lt;/map&gt;
                 <br>
                 <h3>Resultado</h3>
-                algo 
+                <img src="planetas.gif" width="145" height="126" alt="Planetas"
+                usemap="#planetmap">
+                <map name="planetas">
+                <area shape="rect" coords="0,0,82,126" download="sol.jpg" >
+                <area shape="circle" coords="90,58,3" download="mercurio.jpg" >
+                </map>
         </div>
         <div class="box">
-                <h2>37- Etiqueta &lt;abbr&gt; </h2>
-                <p>explicacion</p>
-                <p><i>Atributos:</i>info</p>
+                <h2>37- Etiqueta &lt;ol&gt; </h2>
+                <p>define una lista ordenada</p>
+                <p><i>Atributos:</i>reversed, start, type</p>
                 <h3>Ejemplo</h3>
-                algo &lt; &gt;
+                &lt;ol start="50"&gt;
+                &lt;li&gt;Café&lt;/li&gt;
+                &lt;li&gt;Té&lt;/li&gt;
+                &lt;li&gt;Jugo&lt;/li&gt;
+                &lt;/ol&gt;
                 <br>
                 <h3>Resultado</h3>
-                algo 
+                <ol start="50">
+                        <li>Café</li>
+                        <li>Té</li>
+                        <li>Jugo</li>
+                </ol>
             </div>
         <div class="box">
-                <h2>38- Etiqueta &lt;abbr&gt; </h2>
-                <p>explicacion</p>
-                <p><i>Atributos:</i>info</p>
+                <h2>38- Etiqueta &lt;object&gt; </h2>
+                <p>Define un objeto incrustado</p>
+                <p><i>Atributos:</i>data, form, height, name, type, usemap, width, vspace, codetype</p>
                 <h3>Ejemplo</h3>
-                algo &lt; &gt;
+                &lt;object width="200" height="200" data="holamundo.swf"&gt;&lt;/object&gt;
                 <br>
                 <h3>Resultado</h3>
-                algo 
+                <object width="200" height="200" data="holamundo.swf"></object>
         </div>
         <div class="box">
-                <h2>39- Etiqueta &lt;abbr&gt; </h2>
-                <p>explicacion</p>
-                <p><i>Atributos:</i>info</p>
+                <h2>39- Etiqueta &lt;p&gt; </h2>
+                <p>define un parrafo</p>
+                <p><i>Atributos:</i>align</p>
                 <h3>Ejemplo</h3>
-                algo &lt; &gt;
+                &lt;p&gt; esto es un parrafo &lt;/p&gt;
                 <br>
                 <h3>Resultado</h3>
-                algo 
+                <p>esto es un parrafo</p>
             </div>
         <div class="box">
-                <h2>40- Etiqueta &lt;abbr&gt; </h2>
-                <p>explicacion</p>
-                <p><i>Atributos:</i>info</p>
+                <h2>40- Etiqueta &lt;picture&gt; </h2>
+                <p>Define un contenedor para múltiples recursos de imagen.</p>
+                <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
-                algo &lt; &gt;
+	        &lt;picture&gt;
+                &lt;source media="(min-width: 50px)" srcset="conejos.jpg"&gt;
+                &lt;source media="(min-width: 50px)" srcset="husky.jpg"&gt;
+                &lt;/picture&gt;
                 <br>
                 <h3>Resultado</h3>
-                algo 
+                <picture>
+                        <source media="(min-width: 50px)" srcset="conejos.jpg">
+                        <source media="(min-width: 50px)" srcset="husky.jpg">
+                </picture>
         </div>
         <div class="box">
                 <h2>41- Etiqueta &lt;abbr&gt; </h2>
@@ -786,7 +810,7 @@
                 algo 
             </div>
         <div class="box">
-                <h2>42- Etiqueta &lt;abbr&gt; </h2>
+                <h2>42- Etiqueta &lt;pre&gt; </h2>
                 <p>explicacion</p>
                 <p><i>Atributos:</i>info</p>
                 <h3>Ejemplo</h3>
