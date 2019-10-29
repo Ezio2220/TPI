@@ -22,20 +22,6 @@
             text-align: center;
             color:#FCFFF5;
         }
-        h2:hover{
-            background-color: #FCFFF5;
-        }
-        h2{
-            background-color: #91AA9D;
-            border-radius: 8px 8px 0px 0px;;
-            width: fit-content;
-            text-align: right;
-            margin-top: -52px;
-            margin-left: -20px;
-            padding-right: 5px;
-            padding-top: 5px;
-            box-shadow: -2px -5px 20px 0px #193441;
-        }
         
         .box{
             width: 25%;
@@ -48,8 +34,41 @@
             box-shadow: 3px 0px 20px 5px #193441;
             margin-bottom: 50px;
             vertical-align: top;
+            
         }
-
+        
+        .content {
+               /* display: none; */
+        }
+        h2{
+            background-color: #91AA9D;
+            border-radius: 8px 8px 0px 0px;;
+            width: fit-content;
+            text-align: right;
+            margin-top: -52px;
+            margin-left: -20px;
+            padding-right: 5px;
+            padding-top: 5px;
+            box-shadow: -2px -5px 20px 0px #193441;
+        }
+        h2:hover{
+                background-color: #FCFFF5;
+        }
+        
+        .box h2:hover + .content {
+            display: block;
+            
+        }
+        
+        .noteheader{
+                color:#FCFFF5;
+        }
+        .nth1:hover + .nt1{
+                display: block;
+        }
+        .nth2:hover + #evento{
+                display: block;
+        }
 
         @media screen and (max-width: 600px){
                 audio{
@@ -91,6 +110,7 @@
             margin-bottom: 50px;
             font-size: 65%;
                 }
+            
         }
     </style>
 </head>
@@ -98,9 +118,32 @@
     <!-- &lt; para < y &gt; para > -->
     <div class="contenido">
         <h1>ETIQUETAS HTML</h1><br>
-        
+        <br>
+        <div class="noteheader" >
+                <strong>
+                        <fieldset>
+                                <legend class="nth1" >ATRIBUTOS GLOBALES</legend>
+                                <p class="nt1" hidden > acceskey, class, contenteditable, data-*, dir, draggable, dropzone, hidden, id, lang, spellcheck, style, tabindex, title, translate </p>
+                        </fieldset>
+                        <fieldset>
+                                <legend class="nth2" >ATRIBUTOS DE EVENTO</legend>
+                                <div id="evento" hidden >
+                                        <strong>de Ventana:</strong>
+                                        <p> onafterprint, onbeforeprint, onbeforeunload, onerror, onhashchange, onload, onmessage, onoffline, ononline, onpagehide, onpageshow, onpopstate, onresize, onresize, onstorage, onunload,  </p>
+                                        <strong>de teclado:</strong>
+                                        <p> onkeydown, onkeypress, onkeyup</p>
+                                        <strong>de Mouse:</strong>
+                                        <p>onclick, ondblclick, onmousedown, onmousemove, onmouseout, onmouseover, onmouseup, onmousewheel, onwheel  </p>
+                                </div>
+                        </fieldset>        
+                        
+                </strong>     
+        </div>
+        <br><br>
+
         <div class="box">
             <h2>1- Etiqueta &lt;a&gt; </h2>
+            <div class="content">
             <p>define un hipervinculo/link/enlace..etc</p>
             <p><i>Atributos:</i>download, href, hreflang, media, ping, referrerpolicy, rel, target, type</p>
             <h3>Ejemplo</h3>
@@ -108,6 +151,7 @@
             <br>
             <h3>Resultado</h3>
             sigueme en <a href="https://ezio2220.github.io/TPI/">Github</a>;
+            </div>
         </div>
 
         <div class="box">
