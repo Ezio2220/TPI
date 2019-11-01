@@ -38,7 +38,7 @@
         }
         
         .content {
-               /* display: none; */
+                display: none; 
         }
         h2{
             background-color: #91AA9D;
@@ -53,12 +53,12 @@
         }
         h2:hover{
                 background-color: #FCFFF5;
+                cursor:grab;
         }
         
-        .box h2:hover + .content {
+      /*  .box h2:hover + .content {
             display: block;
-            
-        }
+        }*/
         
         .noteheader{
                 color:#FCFFF5;
@@ -119,11 +119,24 @@
             
         }
     </style>
+    <script type="text/javascript" >
+    function abrir(id){
+            var n = parseInt(id, 10);
+            var x = document.getElementsByClassName("content")[n];
+            if(x.style.display!="none"){
+                x.style.display= "none";
+            }else{
+                x.style.display = "block";
+            }
+           
+    }
+    </script>
 </head>
 <body style="background-color: #3E606F">
     <!-- &lt; para < y &gt; para > -->
     <div class="contenido">
         <h1>ETIQUETAS HTML</h1><br>
+        <b style="color:#FCFFF5;padding-left: 35%;">haga click en medio de las pestañas para abrir las carpetas</b>
         <br>
         <div class="noteheader" >
                 <strong>
@@ -145,10 +158,12 @@
                         
                 </strong>     
         </div>
+        
         <br><br>
+        
 
         <div class="box">
-            <h2>1- Etiqueta &lt;a&gt; </h2>
+            <h2 id="0" onclick="abrir(this.id);"  >1- Etiqueta &lt;a&gt; </h2>
             <div class="content">
             <p>define un hipervinculo/link/enlace..etc</p>
             <p><i>Atributos:</i>download, href, hreflang, media, ping, referrerpolicy, rel, target, type</p>
@@ -161,7 +176,7 @@
         </div>
 
         <div class="box">
-            <h2>2- Etiqueta &lt;abbr&gt; </h2>
+            <h2 id="1" onclick="abrir(this.id);">2- Etiqueta &lt;abbr&gt; </h2> <div class="content">
             <p>define una abreviacion o un acronimo</p>
             <p><i>Atributos:</i>title.</p>
             <h3>Ejemplo</h3>
@@ -171,8 +186,8 @@
             EL <abbr title="World Wide Web Consortium">W3C</abbr> fue fundado en 1994.
         </div>
         
-        <div class="box">
-                <h2>3- Etiqueta &lt;address&gt; </h2>
+         </div><div class="box">
+                <h2 id="2" onclick="abrir(this.id);">3- Etiqueta &lt;address&gt; </h2> <div class="content">
                 <p>define la informacion de contacto del autor o dueño de un documento</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -189,8 +204,8 @@
                         github.com/Ezio2220
                 </address>
         </div>
-        <div class="box">
-                <h2>4- Etiqueta &lt;area&gt; </h2>
+         </div><div class="box">
+                <h2 id="3" onclick="abrir(this.id);">4- Etiqueta &lt;area&gt; </h2> <div class="content">
                 <p>define un area dentro de un mapa de imagen</p>
                 <p><i>Atributos:</i>alt, coords, download, href, hreflang, media, rel, shape, target, type</p>
                 <h3>Ejemplo</h3>
@@ -209,8 +224,8 @@
                         <area shape="circle" coords="90,58,3" download="mercurio.gif" >
                 </map>
         </div>
-        <div class="box">
-                <h2>5- Etiqueta &lt;b&gt; </h2>
+         </div><div class="box">
+                <h2 id="4" onclick="abrir(this.id);">5- Etiqueta &lt;b&gt; </h2> <div class="content">
                 <p>define texto en negrita</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -219,8 +234,8 @@
                 <h3>Resultado</h3>
                 <p>este es un texto normal- <b>y este en negritaXD</b>.</p>
             </div>
-        <div class="box">
-                <h2>6- Etiqueta &lt;base&gt; </h2>
+         </div><div class="box">
+                <h2 id="5" onclick="abrir(this.id);">6- Etiqueta &lt;base&gt; </h2> <div class="content">
                 <p>especifica la url bas/ destino para todas las urls relativas de un documento </p>
                 <p><i>Atributos:</i> href, target</p>
                 <h3>Ejemplo</h3>
@@ -229,8 +244,8 @@
                 <h3>Resultado</h3>
                 <base href="https://ezio2220.github.io/TPI/" target="_blank">
         </div>
-        <div class="box">
-                <h2>7- Etiqueta &lt;bdo&gt; </h2>
+         </div><div class="box">
+                <h2 id="6" onclick="abrir(this.id);">7- Etiqueta &lt;bdo&gt; </h2> <div class="content">
                 <p>anula la direccion del texto actual</p>
                 <p><i>Atributos:</i>dir</p>
                 <h3>Ejemplo:</h3>
@@ -243,8 +258,8 @@
                         este texto ira de derecha a izquierda
                 </bdo>
             </div>
-        <div class="box">
-                <h2>8- Etiqueta &lt;blockquote &gt; </h2>
+         </div><div class="box">
+                <h2 id="7" onclick="abrir(this.id);">8- Etiqueta &lt;blockquote &gt; </h2> <div class="content">
                 <p>defune una secion que se cita de otra fuente</p>
                 <p><i>Atributos:</i>cite</p>
                 <h3>Ejemplo</h3>
@@ -257,8 +272,8 @@
                         este trabajo es demasiado largo y da sueño seguir... hasta hambre
                 </blockquote>
         </div>
-        <div class="box">
-                <h2>9- Etiqueta &lt;button&gt; </h2>
+         </div><div class="box">
+                <h2 id="8" onclick="abrir(this.id);">9- Etiqueta &lt;button&gt; </h2> <div class="content">
                 <p>define un boton clckeable</p>
                 <p><i>Atributos:</i>autofocus, disabled, form, formaction, formenctype, formnovalidate, formtarget, name type value /p>
                 <h3>Ejemplo</h3>
@@ -268,8 +283,8 @@
                 <button type="button">Clickeame!</button>
                 
             </div>
-        <div class="box">
-                <h2>10- Etiqueta &lt;caption&gt; </h2>
+         </div><div class="box">
+                <h2 id="9" onclick="abrir(this.id);">10- Etiqueta &lt;caption&gt; </h2> <div class="content">
                 <p>define un titulo de pagina</p>
                 <p><i>Atributos:</i>align</p>
                 <h3>Ejemplo</h3>
@@ -298,8 +313,8 @@
                         </tr>
                       </table>
         </div>
-        <div class="box">
-                <h2>11- Etiqueta &lt;cite&gt; </h2>
+         </div><div class="box">
+                <h2 id="10" onclick="abrir(this.id);">11- Etiqueta &lt;cite&gt; </h2> <div class="content">
                 <p>define el titulo de un trabajo</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -308,8 +323,8 @@
                 <h3>Resultado</h3>
                 <p><cite>El bromas</cite> protagonizada por joaquin phoenix 2019.</p>
             </div>
-        <div class="box">
-                <h2>12- Etiqueta &lt;code&gt; </h2>
+         </div><div class="box">
+                <h2 id="11" onclick="abrir(this.id);">12- Etiqueta &lt;code&gt; </h2> <div class="content">
                 <p>deine una pieza de codigo de computadora</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -318,8 +333,8 @@
                 <code>una parte de codigo de computadora</code>
                 
         </div>
-        <div class="box">
-                <h2>13- Etiqueta &lt;col&gt; </h2>
+         </div><div class="box">
+                <h2 id="12" onclick="abrir(this.id);">13- Etiqueta &lt;col&gt; </h2> <div class="content">
                 <p>Especifica las propiedades de columna para cada columna dentro de un elemento &lt;colgroup&gt; </p>
                 <p><i>Atributos:</i>align, char, charoff, span, valign, width </p>
                 <h3>Ejemplo</h3>
@@ -358,8 +373,8 @@
                         </tr>
                 </table> 
             </div>
-        <div class="box">
-                <h2>14- Etiqueta &lt;data&gt; </h2>
+         </div><div class="box">
+                <h2 id="13" onclick="abrir(this.id);">14- Etiqueta &lt;data&gt; </h2> <div class="content">
                 <p>Vincula el contenido proporcionado con una traducción legible por máquina</p>
                 <p><i>Atributos:</i>value</p>
                 <h3>Ejemplo</h3>
@@ -376,8 +391,8 @@
                         <li><data value="21055">Cebollin</data></li>
                 </ul>
         </div>
-        <div class="box">
-                <h2>15- Etiqueta &lt;dd&gt; </h2>
+         </div><div class="box">
+                <h2 id="14" onclick="abrir(this.id);">15- Etiqueta &lt;dd&gt; </h2> <div class="content">
                 <p>Define una descripción / valor de un término en una lista de descripción</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -396,8 +411,8 @@
                         <dd>bebida fria de color blanco</dd>
                 </dl>
             </div>
-        <div class="box">
-                <h2>16- Etiqueta &lt;del&gt; </h2>
+         </div><div class="box">
+                <h2 id="15" onclick="abrir(this.id);">16- Etiqueta &lt;del&gt; </h2> <div class="content">
                 <p>Define un texto que se ha eliminado del documento.</p>
                 <p><i>Atributos:</i>cite, datetime</p>
                 <h3>Ejemplo</h3>
@@ -406,8 +421,8 @@
                 <h3>Resultado</h3>
                 <p>mi color favorito es <del>azul</del> <ins>negro</ins>!</p>
         </div>
-        <div class="box">
-                <h2>17- Etiqueta &lt;dfn&gt; </h2>
+         </div><div class="box">
+                <h2 id="16" onclick="abrir(this.id);">17- Etiqueta &lt;dfn&gt; </h2> <div class="content">
                 <p>Representa la instancia en la que se define un término</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -416,8 +431,8 @@
                 <h3>Resultado</h3>
                 <p><dfn>HTML</dfn> es el estandar para la creacion de sitios web.</p>
             </div>
-        <div class="box">
-                <h2>18- Etiqueta &lt;dialog&gt; </h2>
+         </div><div class="box">
+                <h2 id="17" onclick="abrir(this.id);">18- Etiqueta &lt;dialog&gt; </h2> <div class="content">
                 <p>define una ventana o caja de dialogo</p>
                 <p><i>Atributos:</i>open</p>
                 <h3>Ejemplo</h3>
@@ -450,8 +465,8 @@
                         </tr>
                 </table> 
         </div>
-        <div class="box">
-                <h2>19- Etiqueta &lt;div&gt; </h2>
+         </div><div class="box">
+                <h2 id="18" onclick="abrir(this.id);">19- Etiqueta &lt;div&gt; </h2> <div class="content">
                 <p>define una seccion en un documento</p>
                 <p><i>Atributos:</i>align</p>
                 <h3>Ejemplo</h3>
@@ -464,8 +479,8 @@
                         <p>esto es un div celeste</p>
                 </div>
             </div>
-        <div class="box">
-                <h2>20- Etiqueta &lt;dl&gt; </h2>
+         </div><div class="box">
+                <h2 id="19" onclick="abrir(this.id);">20- Etiqueta &lt;dl&gt; </h2> <div class="content">
                 <p>Define una lista descriptiva</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -484,8 +499,8 @@
                 <dd>bebida fria de color blanco</dd>
                </dl> 
         </div>
-        <div class="box">
-                <h2>21- Etiqueta &lt;dt&gt; </h2>
+         </div><div class="box">
+                <h2 id="20" onclick="abrir(this.id);">21- Etiqueta &lt;dt&gt; </h2> <div class="content">
                 <p>Define un término / nombre en una lista descriptiva</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -505,8 +520,8 @@
                 </dl>
             </div>
         
-        <div class="box">
-                <h2>22- Etiqueta &lt;em&gt; </h2>
+         </div><div class="box">
+                <h2 id="21" onclick="abrir(this.id);">22- Etiqueta &lt;em&gt; </h2> <div class="content">
                 <p>Define texto enfatizado</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -515,8 +530,8 @@
                 <h3>Resultado</h3>
                 <em>texto con enfasis</em>
             </div>
-        <div class="box">
-                <h2>23- Etiqueta &lt;fieldset&gt; </h2>
+         </div><div class="box">
+                <h2 id="22" onclick="abrir(this.id);">23- Etiqueta &lt;fieldset&gt; </h2> <div class="content">
                 <p>Agrupa elementos relacionados en un formulario</p>
                 <p><i>Atributos:</i>disabled, form, name</p>
                 <h3>Ejemplo</h3>
@@ -539,8 +554,8 @@
                         </fieldset>
                 </form>
         </div>
-        <div class="box">
-                <h2>24- Etiqueta &lt;figcaption&gt; </h2>
+         </div><div class="box">
+                <h2 id="23" onclick="abrir(this.id);">24- Etiqueta &lt;figcaption&gt; </h2> <div class="content">
                 <p>Define un título para un elemento &lt;figure&gt;</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -555,8 +570,8 @@
                         <figcaption>Fig.1 - husky, mascota domestica muy leal.</figcaption>
                 </figure> 
         </div>
-        <div class="box">
-                <h2>25- Etiqueta &lt;figure&gt; </h2>
+         </div><div class="box">
+                <h2 id="24" onclick="abrir(this.id);">25- Etiqueta &lt;figure&gt; </h2> <div class="content">
                 <p>Especifica contenido autónomo</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -571,8 +586,8 @@
                         <figcaption>Fig.1 - husky, mascota domestica muy leal.</figcaption>
                 </figure>
             </div>
-        <div class="box">
-                <h2>26- Etiqueta &lt;form&gt; </h2>
+         </div><div class="box">
+                <h2 id="25" onclick="abrir(this.id);">26- Etiqueta &lt;form&gt; </h2> <div class="content">
                 <p>define un formulario html para que el usuario ingrese datos</p>
                 <p><i>Atributos:</i>accept-charset, action, autocomplete, method, name, novalidate, target</p>
                 <h3>Ejemplo</h3>
@@ -595,8 +610,8 @@
                         </fieldset>
                 </form> 
         </div>
-        <div class="box">
-                <h2>27- Etiqueta &lt;hr&gt; </h2>
+         </div><div class="box">
+                <h2 id="26" onclick="abrir(this.id);">27- Etiqueta &lt;hr&gt; </h2> <div class="content">
                 <p>Define un cambio temático en el contenido.</p>
                 <p><i>Atributos:</i>align, noshade, size, width</p>
                 <h3>Ejemplo</h3>
@@ -613,8 +628,8 @@
                 <h4>CSS</h4>
                 <p>CSS define como definir la apariencia de las paginas web.....</p>
             </div>
-        <div class="box">
-                <h2>28- Etiqueta &lt;i&gt; </h2>
+         </div><div class="box">
+                <h2 id="27" onclick="abrir(this.id);">28- Etiqueta &lt;i&gt; </h2> <div class="content">
                 <p>Define una parte del texto en una voz o modo alternativo</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -624,8 +639,8 @@
                 
 	<p>El llamo a su auto <i>El rayo mcquin</i>, porque es muy veloz.</p>
         </div>
-        <div class="box">
-                <h2>29- Etiqueta &lt;iframe&gt; </h2>
+         </div><div class="box">
+                <h2 id="28" onclick="abrir(this.id);">29- Etiqueta &lt;iframe&gt; </h2> <div class="content">
                 <p>Define un marco en línea.</p>
                 <p><i>Atributos:</i>src, srcdoc, width, sandbox, name, height, frameborder, scrolling</p>
                 <h3>Ejemplo</h3>
@@ -634,8 +649,8 @@
                 <h3>Resultado</h3>
                 <iframe src="https://ezio2220.github.io/TPI/"></iframe> 
             </div>
-        <div class="box">
-                <h2>30- Etiqueta &lt;img&gt; </h2>
+         </div><div class="box">
+                <h2 id="29" onclick="abrir(this.id);">30- Etiqueta &lt;img&gt; </h2> <div class="content">
                 <p>define una imagen</p>
                 <p><i>Atributos:</i>alt, border, crossorigin, height, ismap, longdesc, sizes, src, srcset, usemap, width, vspace</p>
                 <h3>Ejemplo</h3>
@@ -650,8 +665,8 @@
                         <figcaption>Fig.1 - husky, mascota domestica muy leal.</figcaption>
                 </figure>
         </div>
-        <div class="box">
-                <h2>31- Etiqueta &lt;input&gt; </h2>
+         </div><div class="box">
+                <h2 id="30" onclick="abrir(this.id);">31- Etiqueta &lt;input&gt; </h2> <div class="content">
                 <p>define un control para entrada de datos</p>
                 <p><i>Atributos:</i>accept, alt, autocomplete, autofocus, checked, dirname, disabled, form, formaction, formenctype, formmethod, formnovalidate, formtarget, height, list, max, maxlength, min, multiple, name, pattern, placeholder, readonly, required, size, src, step, type, value, width</p>
                 <h3>Ejemplo</h3>
@@ -674,8 +689,8 @@
                                 </fieldset>
                 </form>  
             </div>
-        <div class="box">
-                <h2>32- Etiqueta &lt;ins&gt; </h2>
+         </div><div class="box">
+                <h2 id="31" onclick="abrir(this.id);">32- Etiqueta &lt;ins&gt; </h2> <div class="content">
                 <p>Define un texto que se ha insertado en un documento.</p>
                 <p><i>Atributos:</i>cite, datetime</p>
                 <h3>Ejemplo</h3>
@@ -684,8 +699,8 @@
                 <h3>Resultado</h3>
                 <p>mi color favorito es <del>azul</del> <ins>negro</ins>!</p>
         </div>
-        <div class="box">
-                <h2>33- Etiqueta &lt;kbd&gt; </h2>
+         </div><div class="box">
+                <h2 id="32" onclick="abrir(this.id);">33- Etiqueta &lt;kbd&gt; </h2> <div class="content">
                 <p>define una entrada de teclado</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -694,8 +709,8 @@
                 <h3>Resultado</h3>
                 <kbd>Entrada de teclado</kbd>
             </div>
-        <div class="box">
-                <h2>34- Etiqueta &lt;label&gt; </h2>
+         </div><div class="box">
+                <h2 id="33" onclick="abrir(this.id);">34- Etiqueta &lt;label&gt; </h2> <div class="content">
                 <p>define la etiqueta de un elemento &lt;input&gt;</p>
                 <p><i>Atributos:</i>for, form</p>
                 <h3>Ejemplo</h3>
@@ -714,8 +729,8 @@
                         <input type="radio" name="genero" id="F" value="F"><br>
                 </form>
         </div>
-        <div class="box">
-                <h2>35- Etiqueta &lt;main&gt; </h2>
+         </div><div class="box">
+                <h2 id="34" onclick="abrir(this.id);">35- Etiqueta &lt;main&gt; </h2> <div class="content">
                 <p>Especifica el contenido principal de un documento.</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -730,8 +745,8 @@
                         <p>contenido principal</p>
                 </main>
             </div>
-        <div class="box">
-                <h2>36- Etiqueta &lt;map&gt; </h2>
+         </div><div class="box">
+                <h2 id="35" onclick="abrir(this.id);">36- Etiqueta &lt;map&gt; </h2> <div class="content">
                 <p>define una imagen de un mapa</p>
                 <p><i>Atributos:</i>name</p>
                 <h3>Ejemplo</h3>
@@ -750,8 +765,8 @@
                 <area shape="circle" coords="90,58,3" download="mercurio.gif" >
                 </map>
         </div>
-        <div class="box">
-                <h2>37- Etiqueta &lt;ol&gt; </h2>
+         </div><div class="box">
+                <h2 id="36" onclick="abrir(this.id);">37- Etiqueta &lt;ol&gt; </h2> <div class="content">
                 <p>define una lista ordenada</p>
                 <p><i>Atributos:</i>reversed, start, type</p>
                 <h3>Ejemplo</h3>
@@ -768,8 +783,8 @@
                         <li>Jugo</li>
                 </ol>
             </div>
-        <div class="box">
-                <h2>38- Etiqueta &lt;object&gt; </h2>
+         </div><div class="box">
+                <h2 id="37" onclick="abrir(this.id);">38- Etiqueta &lt;object&gt; </h2> <div class="content">
                 <p>Define un objeto incrustado</p>
                 <p><i>Atributos:</i>data, form, height, name, type, usemap, width, vspace, codetype</p>
                 <h3>Ejemplo</h3>
@@ -778,8 +793,8 @@
                 <h3>Resultado</h3>
                 <object width="200" height="200" data="holamundo.swf"></object>
         </div>
-        <div class="box">
-                <h2>39- Etiqueta &lt;p&gt; </h2>
+         </div><div class="box">
+                <h2 id="38" onclick="abrir(this.id);">39- Etiqueta &lt;p&gt; </h2> <div class="content">
                 <p>define un parrafo</p>
                 <p><i>Atributos:</i>align</p>
                 <h3>Ejemplo</h3>
@@ -788,8 +803,8 @@
                 <h3>Resultado</h3>
                 <p>esto es un parrafo</p>
             </div>
-        <div class="box">
-                <h2>40- Etiqueta &lt;picture&gt; </h2>
+         </div><div class="box">
+                <h2 id="39" onclick="abrir(this.id);">40- Etiqueta &lt;picture&gt; </h2> <div class="content">
                 <p>Define un contenedor para múltiples recursos de imagen.</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -806,8 +821,8 @@
                         <img src="conejos.jpg" alt="conejos" >
                 </picture>
         </div>
-          <div class="box">
-                <h2>41- Etiqueta &lt;pre&gt; </h2>
+           </div><div class="box">
+                <h2 id="40" onclick="abrir(this.id);">41- Etiqueta &lt;pre&gt; </h2> <div class="content">
                 <p>define un texto preformateado</p>
                 <p><i>Atributos:</i>width</p>
                 <h3>Ejemplo</h3>
@@ -822,8 +837,8 @@
                             formateado
                 </pre>
         </div>
-        <div class="box">
-                <h2>42- Etiqueta &lt;q&gt; </h2>
+         </div><div class="box">
+                <h2 id="41" onclick="abrir(this.id);">42- Etiqueta &lt;q&gt; </h2> <div class="content">
                 <p>Define una cita corta</p>
                 <p><i>Atributos:</i>cite</p>
                 <h3>Ejemplo</h3>
@@ -839,8 +854,8 @@
                 </p>
             </div>
       
-        <div class="box">
-                <h2>43- Etiqueta &lt;rt&gt; </h2>
+         </div><div class="box">
+                <h2 id="42" onclick="abrir(this.id);">43- Etiqueta &lt;rt&gt; </h2> <div class="content">
                 <p>Define una explicación / pronunciación de los caracteres (para la tipografía de Asia oriental)</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -853,8 +868,8 @@
                         漢 <rt> ㄏㄢˋ </rt>
                 </ruby>
             </div>
-        <div class="box">
-                <h2>44- Etiqueta &lt;s&gt; </h2>
+         </div><div class="box">
+                <h2 id="43" onclick="abrir(this.id);">44- Etiqueta &lt;s&gt; </h2> <div class="content">
                 <p>Define texto que ya no es correcto</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -863,8 +878,8 @@
                 <h3>Resultado</h3>
                 <p><s>mi auto es Azul</s></p>
         </div>
-        <div class="box">
-                <h2>45- Etiqueta &lt;select&gt; </h2>
+         </div><div class="box">
+                <h2 id="44" onclick="abrir(this.id);">45- Etiqueta &lt;select&gt; </h2> <div class="content">
                 <p>define una lista desplegable</p>
                 <p><i>Atributos:</i>autofocus, disabled, form, multiple, name, required, size</p>
                 <h3>Ejemplo</h3>
@@ -879,8 +894,8 @@
                         <option value="femenino">Femenino</option>
                 </select>
             </div>
-        <div class="box">
-                <h2>46- Etiqueta &lt;strong&gt; </h2>
+         </div><div class="box">
+                <h2 id="45" onclick="abrir(this.id);">46- Etiqueta &lt;strong&gt; </h2> <div class="content">
                 <p>define un texto importante</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -889,8 +904,8 @@
                 <h3>Resultado</h3>
                 <strong>Texto Importante</strong>
         </div>
-        <div class="box">
-                <h2>47- Etiqueta &lt;table&gt; </h2>
+         </div><div class="box">
+                <h2 id="46" onclick="abrir(this.id);">47- Etiqueta &lt;table&gt; </h2> <div class="content">
                 <p>define una tabla</p>
                 <p><i>Atributos:</i>border, cellpadding, cellspacing, summary, width</p>
                 <h3>Ejemplo</h3>
@@ -921,8 +936,8 @@
                         </tr>
                 </table> 
             </div>
-        <div class="box">
-                <h2>48- Etiqueta &lt;textarea&gt; </h2>
+         </div><div class="box">
+                <h2 id="47" onclick="abrir(this.id);">48- Etiqueta &lt;textarea&gt; </h2> <div class="content">
                 <p>Define un control de entrada multilínea (área de texto)</p>
                 <p><i>Atributos:</i>autofocus, cols, dirname, disabled, form, maxlength, name, placeholder, readonly, required, rows, wrap</p>
                 <h3>Ejemplo</h3>
@@ -937,8 +952,8 @@
                 de texto multilinea
                 </textarea>
         </div>
-        <div class="box">
-                <h2>49- Etiqueta &lt;u&gt; </h2>
+         </div><div class="box">
+                <h2 id="48" onclick="abrir(this.id);">49- Etiqueta &lt;u&gt; </h2> <div class="content">
                 <p>Define el texto que debería ser estilísticamente diferente del texto normal.</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -947,8 +962,9 @@
                 <h3>Resultado</h3>
                 <p>esto es un <u>parrafo</u> </p>
             </div>
+            </div>
         <div class="box">
-                <h2>50- Etiqueta &lt;ul&gt; </h2>
+                <h2 id="49" onclick="abrir(this.id);">50- Etiqueta &lt;ul&gt; </h2> <div class="content">
                 <p>define una lista desordenada</p>
                 <p><i>Atributos:</i>compact, type</p>
                 <h3>Ejemplo</h3>
@@ -965,12 +981,13 @@
                         <li><data value="21055">Cebollin</data></li>
                 </ul>
         </div>
+        </div>
         <!--...........................................................................HTML 5 --------------------------------------------------------------->
          <a name="HTML5" id="HTML5"></a>
         <h1>ETIQUETAS HTML 5</h1><br><br><br>
 
         <div class="box">
-                <h2>1- Etiqueta &lt;audio&gt; </h2>
+                <h2 id="50" onclick="abrir(this.id);">1- Etiqueta &lt;audio&gt; </h2> <div class="content">
                 <p>define un contenido sonoro.</p>
                 <p><i>Atributos:</i>autoplay, controls, loop, muted, preload, src</p>
                 <h3>Ejemplo</h3>
@@ -979,8 +996,9 @@
                 <h3>Resultado</h3>
                 <audio controls> <source src="hola.mp3" type="audio/mpeg"> </audio>
         </div>
+        </div>
         <div class="box">
-                <h2>2- Etiqueta &lt;article&gt; </h2>
+                <h2 id="51" onclick="abrir(this.id);">2- Etiqueta &lt;article&gt; </h2> <div class="content">
                 <p>define un hipervinculo/link/enlace..etc</p>
                 <p><i>Atributos:</i>download, href, hreflang, media, ping, referrerpolicy, rel, target, type</p>
                 <h3>Ejemplo</h3>
@@ -993,8 +1011,9 @@
                 sigueme en <a href="https://github.com/Ezio2220"> Github</a>;
                 </article>
         </div>
+        </div>
         <div class="box">
-                <h2>3- Etiqueta &lt;aside&gt; </h2>
+                <h2 id="52" onclick="abrir(this.id);">3- Etiqueta &lt;aside&gt; </h2> <div class="content">
                 <p>define un contenido a lado del contenido de la pagina</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -1003,8 +1022,9 @@
                 <h3>Resultado</h3>
                 <p>contenido </p> <aside> <h5> otra onda</h5> <p>si otra onda</p>  </aside>
         </div>
+        </div>
         <div class="box">
-                <h2>4- Etiqueta &lt;canvas&gt; </h2>
+                <h2 id="53" onclick="abrir(this.id);">4- Etiqueta &lt;canvas&gt; </h2> <div class="content">
                 <p>se usa para hacer dibujos, sobre la marcha mediante scripts (usualmente javascript)</p>
                 <p><i>Atributos:</i>height, width</p>
                 <h3>Ejemplo</h3>
@@ -1025,8 +1045,9 @@
 	        </script>
                 
         </div>
+        </div>
         <div class="box">
-                <h2>5- Etiqueta &lt;details&gt; </h2>
+                <h2 id="54" onclick="abrir(this.id);">5- Etiqueta &lt;details&gt; </h2> <div class="content">
                 <p>define detalles adicionales que el usuario puede ver o ocultar.</p>
                 <p><i>Atributos:</i>open.</p>
                 <h3>Ejemplo</h3>
@@ -1037,8 +1058,9 @@
                 <summary>Leonardo da Vinci.</summary>
 		<details> <p>en la actualidad no existe!. </p> </details>
         </div>
+        </div>
         <div class="box">
-                <h2>6- Etiqueta &lt;datalist&gt; </h2>
+                <h2 id="55" onclick="abrir(this.id);">6- Etiqueta &lt;datalist&gt; </h2> <div class="content">
                 <p>especifica una lista de opciones predefinidas para los input.</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -1061,8 +1083,9 @@
                         <option value="Safari">
                 </datalist>
         </div>
+        </div>
         <div class="box">
-                <h2>7- Etiqueta &lt;embed&gt; </h2>
+                <h2 id="56" onclick="abrir(this.id);">7- Etiqueta &lt;embed&gt; </h2> <div class="content">
                 <p>define un contenedor para una aplicacion(no html) externa.</p>
                 <p><i>Atributos:</i>height, src, type, width</p>
                 <h3>Ejemplo</h3>
@@ -1071,8 +1094,9 @@
                 <h3>Resultado</h3>
                 <embed src="holamundo.swf">
         </div>
+        </div>
         <div class="box">
-                <h2>8- Etiqueta &lt;foter&gt; </h2>
+                <h2 id="57" onclick="abrir(this.id);">8- Etiqueta &lt;foter&gt; </h2> <div class="content">
                 <p>define el pie de pagina para un documento o seccion</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -1085,8 +1109,9 @@
                         <p>hecho por: Franklin Fuentes</p>
                 </footer>
         </div>
+        </div>
         <div class="box">
-                <h2>9- Etiqueta &lt;header&gt; </h2>
+                <h2 id="58" onclick="abrir(this.id);">9- Etiqueta &lt;header&gt; </h2> <div class="content">
                 <p>define un encabezado para un documento o seccion</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -1099,8 +1124,9 @@
                         <h5>un encabezado importante</h5>
                 </header>
         </div>
+        </div>
         <div class="box">
-                <h2>10- Etiqueta &lt;mark&gt; </h2>
+                <h2 id="59" onclick="abrir(this.id);">10- Etiqueta &lt;mark&gt; </h2> <div class="content">
                 <p>define un texto marcado/ resaltado</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -1109,8 +1135,9 @@
                 <h3>Resultado</h3>
                 <p>estudia para  <mark>ingenieria economica</mark> Hoy.</p>
         </div>
+        </div>
         <div class="box">
-                <h2>11- Etiqueta &lt;meter&gt; </h2>
+                <h2 id="60" onclick="abrir(this.id);">11- Etiqueta &lt;meter&gt; </h2> <div class="content">
                 <p>define una medidor dentro de un rango definido.</p>
                 <p><i>Atributos:</i>form, high, low, max, min, optimum, value.</p>
                 <h3>Ejemplo</h3>
@@ -1119,8 +1146,9 @@
                 <h3>Resultado</h3>
                 <meter value="0.6">60%</meter>
         </div>
+        </div>
         <div class="box">
-                <h2>12- Etiqueta &lt;nav&gt; </h2>
+                <h2 id="61" onclick="abrir(this.id);">12- Etiqueta &lt;nav&gt; </h2> <div class="content">
                 <p>define los links de navegacion del sitio.</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -1133,8 +1161,9 @@
                         <a href="#HTML">Etiquetas Html5</a> 
                 </nav>
         </div>
+        </div>
         <div class="box">
-                <h2>13- Etiqueta &lt;progress&gt; </h2>
+                <h2 id="62" onclick="abrir(this.id);">13- Etiqueta &lt;progress&gt; </h2> <div class="content">
                 <p>representa el progreso de una tarea(barrita de carga).</p>
                 <p><i>Atributos:</i>max, value</p>
                 <h3>Ejemplo</h3>
@@ -1144,8 +1173,9 @@
                 <progress value="22" max="100"></progress>
                 
         </div>
+        </div>
         <div class="box">
-                <h2>14- Etiqueta &lt;svg&gt; </h2>
+                <h2 id="63" onclick="abrir(this.id);">14- Etiqueta &lt;svg&gt; </h2> <div class="content">
                 <p>define un contenedor de graficos svg(graficas vectoriales escalables)</p>
                 <p><i>Atributos:</i>width, height</p>
                 <h3>Ejemplo</h3>
@@ -1158,8 +1188,9 @@
                         <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
                 </svg>
         </div>
+        </div>
         <div class="box">
-                <h2>15- Etiqueta &lt;source&gt; </h2>
+                <h2 id="64" onclick="abrir(this.id);">15- Etiqueta &lt;source&gt; </h2> <div class="content">
                 <p>define multiples recursos multimedia para elementos de multimedia(audio y video)</p>
                 <p><i>Atributos:</i> src, srcset, media, sizes, type.</p>
                 <h3>Ejemplo</h3>
@@ -1168,8 +1199,9 @@
                 <h3>Resultado</h3>
                 <audio controls> <source src="hola.mp3" type="audio/mpeg"> </audio>
         </div>
+        </div>
         <div class="box">
-                <h2>16- Etiqueta &lt;summary&gt; </h2>
+                <h2 id="65" onclick="abrir(this.id);">16- Etiqueta &lt;summary&gt; </h2> <div class="content">
                 <p>define un encabezado visible para los elementos de la etiqueta &lt;details&gt;</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -1180,8 +1212,9 @@
                 <summary>Leonardo da Vinci.</summary>
 		<details> <p>en la actualidad no existe!. </p> </details>
         </div>
+        </div>
         <div class="box">
-                <h2>17- Etiqueta &lt;track&gt; </h2>
+                <h2 id="66" onclick="abrir(this.id);">17- Etiqueta &lt;track&gt; </h2> <div class="content">
                 <p>define pistas de texto para elementos multimedia.</p>
                 <p><i>Atributos:</i>default, kind, label, src, srclang</p>
                 <h3>Ejemplo</h3>
@@ -1198,8 +1231,9 @@
                                 <track src="trailer_es.vtt" kind="subtitles" srclang="es" label="Spanish">
                 </video>
         </div>
+        </div>
         <div class="box">
-                <h2>18- Etiqueta &lt;time&gt; </h2>
+                <h2 id="67" onclick="abrir(this.id);">18- Etiqueta &lt;time&gt; </h2> <div class="content">
                 <p>define una fecha o hora.</p>
                 <p><i>Atributos:</i>datetime</p>
                 <h3>Ejemplo</h3>
@@ -1208,8 +1242,9 @@
                 <h3>Resultado</h3>
                 <p>En esta fecha <time datetime="2020-01-10 10:00">Viajaré</time>.</p>
         </div>
+        </div>
         <div class="box">
-                <h2>19- Etiqueta &lt;video&gt; </h2>
+                <h2 id="68" onclick="abrir(this.id);">19- Etiqueta &lt;video&gt; </h2> <div class="content">
                 <p>define un video o pelicula.</p>
                 <p><i>Atributos:</i>autoplay, controls, height, loop, muted, poster, preload, src, width</p>
                 <h3>Ejemplo</h3>
@@ -1224,8 +1259,9 @@
                                 <track src="trailer_en.vtt" kind="subtitles" srclang="en" label="English">
                 </video>
         </div>
+        </div>
         <div class="box">
-                <h2>20- Etiqueta &lt;wbr&gt; </h2>
+                <h2 id="69" onclick="abrir(this.id);">20- Etiqueta &lt;wbr&gt; </h2> <div class="content">
                 <p>define un posible salto de linea</p>
                 <p><i>Atributos:</i>este elemento solo posee los atributos globales y de eventos.(Vease al inicio)</p>
                 <h3>Ejemplo</h3>
@@ -1238,7 +1274,7 @@
                 para ser mejor debes dejar de compararte con<wbr> otros centrate solo en ti mismo.
                 </p>
         </div>
-
+        </div>
     </div>
     <footer>
         hecho por: Franklin Josué Córdova Fuentes <b>CF17002</b>
